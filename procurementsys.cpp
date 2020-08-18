@@ -11,6 +11,8 @@ ProcurementSys::ProcurementSys(QWidget *parent)
     this->setStyleSheet("background-color: #00FFFFFF;");
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->setMouseTracking(true);
+    ui.tabWidget->setDocumentMode(true);
+    QObject::connect(ui.expandButton, SIGNAL(clicked()), this, SLOT(showMaximized()));
     //this->setStyleSheet(nStyle);
     //qDebug() << nStyle;
 }

@@ -16,6 +16,7 @@ public:
     ~ProcurementSys();
     void mouseMoveEvent(QMouseEvent * evnt) override ;
     void mousePressEvent(QMouseEvent* evnt) override;
+    
 
 private:
     Ui::ProcurementSysClass ui;
