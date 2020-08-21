@@ -14,8 +14,7 @@ ProcurementSys::ProcurementSys(QWidget *parent)
     this->setBaseSize({ 1020,650 });
     ui.tabWidget->setDocumentMode(true);
     QObject::connect(ui.expandButton, SIGNAL(clicked()), this, SLOT(maxandminWindow()));
-    //this->setStyleSheet(nStyle);
-    //qDebug() << nStyle;
+    QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
 }
 
 ProcurementSys::~ProcurementSys()
