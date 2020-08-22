@@ -954,6 +954,51 @@ background-color: rgb(255, 0, 0);</string>
           </property>
          </spacer>
         </item>
+        <item>
+         <widget class="QToolBox" name="toolBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>200</width>
+             <height>174</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Page 1</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="page_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>493</width>
+             <height>174</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Page 2</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
        </layout>
       </item>
       <item>
@@ -1021,7 +1066,7 @@ QPushButton
 	font-size: 11px;
 	font-weight: bold;
 	border: none;
-	border-radius: 25px;
+	border-radius: 12px;
 	padding: 5px;
 
 }
