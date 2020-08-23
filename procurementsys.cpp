@@ -24,10 +24,10 @@ ProcurementSys::~ProcurementSys()
 
 void ProcurementSys::mouseMoveEvent (QMouseEvent* evnt)
 {
-    qDebug() << evnt->pos();
+    //qDebug() << evnt->pos();
     if (evnt->buttons() & Qt::LeftButton)
     {
-        qDebug() << "Left Button !";
+        //qDebug() << "Left Button !";
         QPoint npos = evnt->pos();
         QPoint diff = npos - mpos;
         this->move(this->pos() + diff);
