@@ -1,11 +1,12 @@
 #include "procurementsys.h"
 
-ProcurementSys::ProcurementSys(QWidget *parent)
+RestaurantSys::RestaurantSys(QWidget *parent)
     : QMainWindow(parent), maxwin(false)
 {
     ui.setupUi(this);
     //nFile->open(QIODevice::ReadOnly);
     //QString nStyle = QLatin1String( nFile->readAll() );
+    this->setWindowTitle("NaiSys | RestaurantSys");
     this->setAttribute(Qt::WA_TranslucentBackground);
     this->setWindowOpacity(0.978);
     this->setStyleSheet("background-color: #00FFFFFF;");
@@ -17,12 +18,12 @@ ProcurementSys::ProcurementSys(QWidget *parent)
     QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
 }
 
-ProcurementSys::~ProcurementSys()
+RestaurantSys::~RestaurantSys()
 {
     delete(nFile);
 }
 
-void ProcurementSys::mouseMoveEvent (QMouseEvent* evnt)
+void RestaurantSys::mouseMoveEvent (QMouseEvent* evnt)
 {
     //qDebug() << evnt->pos();
     if (evnt->buttons() & Qt::LeftButton)
@@ -34,12 +35,12 @@ void ProcurementSys::mouseMoveEvent (QMouseEvent* evnt)
     }
 }
 
-void ProcurementSys::mousePressEvent(QMouseEvent* evnt)
+void RestaurantSys::mousePressEvent(QMouseEvent* evnt)
 {
     mpos = evnt->pos();
 }
 
-void ProcurementSys::maxandminWindow()
+void RestaurantSys::maxandminWindow()
 {
     if (maxwin)
     {

@@ -14,7 +14,8 @@
    <string>ProcurementSys</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QPushButton
+   <string notr="true">font: 10pt &quot;Segoe MDL2 Assets&quot;;
+QPushButton
 {
 	background-color: #ff3333;
 	color: #fff;
@@ -816,13 +817,13 @@ QScrollBar::sub-page:vertical
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>24</height>
+        <height>20</height>
        </size>
       </property>
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>34</height>
+        <height>28</height>
        </size>
       </property>
       <property name="cursor">
@@ -836,6 +837,12 @@ QScrollBar::sub-page:vertical
 padding: -4px, -4px, -4px, -4px;</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <property name="topMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,1,0,0">
          <property name="sizeConstraint">
@@ -857,7 +864,8 @@ padding: -4px, -4px, -4px, -4px;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">font: 75 9pt &quot;Leelawadee UI&quot;;
-font: 10pt &quot;Mongolian Baiti&quot;;</string>
+font: 10pt &quot;Mongolian Baiti&quot;;
+font: 10pt &quot;Segoe MDL2 Assets&quot;;</string>
            </property>
            <property name="text">
             <string>NaiSys | Procurement System</string>
@@ -895,7 +903,7 @@ font: 10pt &quot;Mongolian Baiti&quot;;</string>
            <property name="maximumSize">
             <size>
              <width>15</width>
-             <height>15</height>
+             <height>10</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -912,7 +920,7 @@ background-color: rgb(85, 255, 127);</string>
            <property name="maximumSize">
             <size>
              <width>15</width>
-             <height>15</height>
+             <height>10</height>
             </size>
            </property>
            <property name="styleSheet">
@@ -947,18 +955,42 @@ background-color: rgb(255, 0, 0);</string>
        <string notr="true">border-radius: 9px; background-color: #80cbc4;
 background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(108, 171, 147, 255), stop:1 rgba(255, 255, 255, 255));
 background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(108, 171, 147, 255), stop:0.977273 rgba(200, 246, 227, 255));
-font-size: 11px;
-	font-weight: bold;</string>
+font: 10pt &quot;Segoe MDL2 Assets&quot;;
+QPushButton
+{
+	background-color: #b2dfdb;
+	color: #fff;
+	font-size: 11px;
+	font-weight: bold;
+	border: none;
+	border-radius: 4px;
+	padding: 5px;
+
+}
+
+
+QPushButton::disabled
+{
+	background-color: #5c5c5c;
+
+}
+
+
+QPushButton::pressed
+{
+	background-color: #ff4747;
+
+}</string>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <property name="spacing">
-        <number>1</number>
+        <number>6</number>
        </property>
        <property name="topMargin">
-        <number>2</number>
+        <number>0</number>
        </property>
        <property name="bottomMargin">
-        <number>2</number>
+        <number>0</number>
        </property>
        <item>
         <widget class="QPushButton" name="pushButton_8">
@@ -1014,8 +1046,8 @@ font-size: 11px;
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">padding: 2px;
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0.006, stop:0 rgba(151, 151, 151, 255), stop:1 rgba(234, 234, 234, 255));</string>
+          <string notr="true">padding: 2px; border-radius: 8px;
+background-color: qlineargradient(spread:reflect, x1:1, y1:1, x2:1, y2:0.506, stop:0 rgba(178, 178, 178, 255), stop:1 rgba(212, 212, 212, 255));</string>
          </property>
          <property name="placeholderText">
           <string>Search</string>
@@ -1030,51 +1062,71 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0.006, stop:0
       <item>
        <layout class="QVBoxLayout" name="menubar_layout">
         <item>
-         <widget class="QPushButton" name="pushButton_9">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="styleSheet">
-           <string notr="true">background-color: #b2dfdb;
-	color: #fff;
-	font-size: 11px;
-	font-weight: bold;
-	border: none;
-	border-radius: 5px;
-	padding: 5px;</string>
+           <string notr="true">
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(108, 171, 147, 255), stop:1 rgba(182, 225, 225, 255));</string>
           </property>
-          <property name="text">
-           <string>PushButton</string>
+          <property name="widgetResizable">
+           <bool>true</bool>
           </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_11">
-          <property name="styleSheet">
-           <string notr="true">background-color: #b2dfdb;
-	color: #fff;
-	font-size: 11px;
-	font-weight: bold;
-	border: none;
-	border-radius: 5px;
-	padding: 5px;</string>
-          </property>
-          <property name="text">
-           <string>PushButton</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pushButton_10">
-          <property name="styleSheet">
-           <string notr="true">background-color: #b2dfdb;
-	color: #fff;
-	font-size: 11px;
-	font-weight: bold;
-	border: none;
-	border-radius: 5px;
-	padding: 5px;</string>
-          </property>
-          <property name="text">
-           <string>PushButton</string>
-          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>493</width>
+             <height>247</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QPushButton" name="pushButton_9">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_10">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
          </widget>
         </item>
         <item>
@@ -1082,10 +1134,13 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0.006, stop:0
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
           <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
-            <height>40</height>
+            <height>20</height>
            </size>
           </property>
          </spacer>
@@ -1106,9 +1161,7 @@ background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0.006, stop:0
           </property>
           <property name="styleSheet">
            <string notr="true">border-radius: 12px;
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(108, 171, 147, 255), stop:1 rgba(255, 255, 255, 255));
-background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(108, 171, 147, 255), stop:0.977273 rgba(200, 246, 227, 255));
-
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(108, 171, 147, 255), stop:1 rgba(182, 225, 225, 255));
 tab
 {
 	border-radius: 2px;
@@ -1124,7 +1177,7 @@ tab
              <x>0</x>
              <y>0</y>
              <width>200</width>
-             <height>156</height>
+             <height>186</height>
             </rect>
            </property>
            <attribute name="label">
@@ -1137,12 +1190,108 @@ tab
              <x>0</x>
              <y>0</y>
              <width>200</width>
-             <height>156</height>
+             <height>186</height>
             </rect>
            </property>
            <attribute name="label">
             <string>About NaiSys</string>
            </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-radius: 5px; padding:5,5,5,5;</string>
+              </property>
+              <property name="text">
+               <string>Developed by Zadock Maloba</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>20</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">border-radius: 5px; padding: 5,5,5,5;</string>
+              </property>
+              <property name="text">
+               <string>Follow us on :</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_11">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Twitter</string>
+              </property>
+              <property name="icon">
+               <iconset resource="procurementsys.qrc">
+                <normaloff>:/socialmediaicons/textures/PNG/twitter.png</normaloff>:/socialmediaicons/textures/PNG/twitter.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_12">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Facebook</string>
+              </property>
+              <property name="icon">
+               <iconset resource="procurementsys.qrc">
+                <normaloff>:/socialmediaicons/textures/PNG/facebook.png</normaloff>:/socialmediaicons/textures/PNG/facebook.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </widget>
          </widget>
         </item>
@@ -1626,10 +1775,10 @@ QScrollBar::sub-page:vertical
                </property>
               </widget>
              </item>
-             <item row="1" column="0">
-              <widget class="QPushButton" name="pushButton_4">
+             <item row="1" column="2">
+              <widget class="QPushButton" name="pushButton_6">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
@@ -1639,10 +1788,10 @@ QScrollBar::sub-page:vertical
                </property>
               </widget>
              </item>
-             <item row="1" column="2">
-              <widget class="QPushButton" name="pushButton_6">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="pushButton_4">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>

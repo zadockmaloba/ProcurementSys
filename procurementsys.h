@@ -8,13 +8,13 @@
 #include <qevent.h>
 
 
-class ProcurementSys : public QMainWindow
+class RestaurantSys : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    ProcurementSys(QWidget *parent = Q_NULLPTR);
-    ~ProcurementSys();
+    RestaurantSys(QWidget *parent = Q_NULLPTR);
+    ~RestaurantSys();
     void mouseMoveEvent(QMouseEvent * evnt) override ;
     void mousePressEvent(QMouseEvent* evnt) override;
 

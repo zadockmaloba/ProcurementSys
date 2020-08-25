@@ -1,4 +1,47 @@
 <RCC>
-    <qresource prefix="ProcurementSys">
-    </qresource>
+  <qresource prefix="ProcurementSys"/>
+  <qresource prefix="socialmediaicons">
+    <file>textures/PNG/aim.png</file>
+    <file>textures/PNG/ask.png</file>
+    <file>textures/PNG/bebo.png</file>
+    <file>textures/PNG/betvibes.png</file>
+    <file>textures/PNG/blinklist.png</file>
+    <file>textures/PNG/blogger.png</file>
+    <file>textures/PNG/buzz.png</file>
+    <file>textures/PNG/delicious.png</file>
+    <file>textures/PNG/deviantart.png</file>
+    <file>textures/PNG/digg.png</file>
+    <file>textures/PNG/diigo.png</file>
+    <file>textures/PNG/everynote.png</file>
+    <file>textures/PNG/facebook.png</file>
+    <file>textures/PNG/flickr.png</file>
+    <file>textures/PNG/friendfeed.png</file>
+    <file>textures/PNG/friendster.png</file>
+    <file>textures/PNG/furl.png</file>
+    <file>textures/PNG/google.png</file>
+    <file>textures/PNG/lastfm.png</file>
+    <file>textures/PNG/linkedin.png</file>
+    <file>textures/PNG/livejournal.png</file>
+    <file>textures/PNG/mixx.png</file>
+    <file>textures/PNG/myspace.png</file>
+    <file>textures/PNG/newsvine.png</file>
+    <file>textures/PNG/orkut.png</file>
+    <file>textures/PNG/plaxo.png</file>
+    <file>textures/PNG/plurk.png</file>
+    <file>textures/PNG/posterous.png</file>
+    <file>textures/PNG/reddit.png</file>
+    <file>textures/PNG/rss.png</file>
+    <file>textures/PNG/shoutwire.png</file>
+    <file>textures/PNG/spurl.png</file>
+    <file>textures/PNG/squidoo.png</file>
+    <file>textures/PNG/stumbleupon.png</file>
+    <file>textures/PNG/technorati.png</file>
+    <file>textures/PNG/tumblr.png</file>
+    <file>textures/PNG/twitter.png</file>
+    <file>textures/PNG/vimeo.png</file>
+    <file>textures/PNG/wordpress.png</file>
+    <file>textures/PNG/xanga.png</file>
+    <file>textures/PNG/yahoo.png</file>
+    <file>textures/PNG/youtube.png</file>
+  </qresource>
 </RCC>
