@@ -8,4 +8,5 @@ CashierApp::CashierApp(QWidget *parent)
 
 CashierApp::~CashierApp()
 {
+
 }

@@ -13,16 +13,17 @@ RestaurantSys::RestaurantSys(QWidget *parent)
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->setMouseTracking(true); 
     this->setBaseSize({ 1020,650 });
-    //ui.tabWidget->setDocumentMode(true);
+    this->loadApplets(new CashierApp, "zApp");
 
     QObject::connect(ui.expandButton, SIGNAL(clicked()), this, SLOT(maxandminWindow()));
     QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
-    QObject::connect(ui.pushButton, SIGNAL(clicked()), ui.tabWidget, SLOT(setCurrentIndex(2)));
+    QObject::connect(ui.pushButton, SIGNAL(clicked()), ui.cashier, SLOT(show()));
     QObject::connect(ui.minimizeButton, SIGNAL(clicked()), this, SLOT(showMinimized()));
 }
 
 RestaurantSys::~RestaurantSys()
 {
+    delete(csApp);
     delete(&ui);
     delete(nFile);
 }
@@ -45,6 +46,11 @@ void RestaurantSys::mousePressEvent(QMouseEvent* evnt)
 void RestaurantSys::resizeEvent(QResizeEvent* evnt)
 {
 
+}
+
+void RestaurantSys::loadApplets(QWidget *prnt, QString appname)
+{
+    ui.tabWidget->addTab(prnt, appname);
 }
 
 void RestaurantSys::maxandminWindow()

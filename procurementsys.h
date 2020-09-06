@@ -8,6 +8,8 @@
 #include <qevent.h>
 #include <qsizegrip.h>
 
+#include "global_custom_widgets.h"
+
 
 class RestaurantSys : public QMainWindow
 {
@@ -19,11 +21,14 @@ public:
     void mouseMoveEvent(QMouseEvent * evnt) override ;
     void mousePressEvent(QMouseEvent* evnt) override;
     void resizeEvent(QResizeEvent* evnt) override;
+    void loadApplets(QWidget *prnt, QString appname);
+
 
 public slots:
     void maxandminWindow();
 
 private:
+    CashierApp* csApp = new CashierApp();
     Ui::ProcurementSysClass ui;
     QFile* nFile = new QFile("qss/zedqss/zed.qss");
     QPoint mpos;
