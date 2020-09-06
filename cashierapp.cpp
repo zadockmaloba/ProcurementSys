@@ -10,3 +10,8 @@ CashierApp::~CashierApp()
 {
 
 }
+
+void CashierApp::closeTab(QWidget* prntTab)
+{
+	
+}

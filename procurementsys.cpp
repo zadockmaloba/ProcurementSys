@@ -17,8 +17,9 @@ RestaurantSys::RestaurantSys(QWidget *parent)
 
     QObject::connect(ui.expandButton, SIGNAL(clicked()), this, SLOT(maxandminWindow()));
     QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
-    QObject::connect(ui.pushButton, SIGNAL(clicked()), ui.cashier, SLOT(show()));
     QObject::connect(ui.minimizeButton, SIGNAL(clicked()), this, SLOT(showMinimized()));
+
+    this->buttonMapper();
 }
 
 RestaurantSys::~RestaurantSys()
@@ -48,9 +49,47 @@ void RestaurantSys::resizeEvent(QResizeEvent* evnt)
 
 }
 
-void RestaurantSys::loadApplets(QWidget *prnt, QString appname)
+RestaurantSys::HtabIndx RestaurantSys::loadApplets(QWidget *prnt, QString appname)
 {
-    ui.tabWidget->addTab(prnt, appname);
+    return { ui.tabWidget->addTab(prnt, appname), appname };
+}
+
+void RestaurantSys::openCashierApplet()
+{
+    this->loadApplets(new CashierApp, "cashier");
+}
+
+void RestaurantSys::openAccountantApplet()
+{
+}
+
+void RestaurantSys::openProcurementApplet()
+{
+}
+
+void RestaurantSys::openHRApplet()
+{
+}
+
+void RestaurantSys::closeCashierApplet()
+{
+}
+
+void RestaurantSys::closeAccountantApplet()
+{
+}
+
+void RestaurantSys::closeProcurementApplet()
+{
+}
+
+void RestaurantSys::closeHRApplet()
+{
+}
+
+void RestaurantSys::buttonMapper()
+{
+    QObject::connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(openCashierApplet()));
 }
 
 void RestaurantSys::maxandminWindow()

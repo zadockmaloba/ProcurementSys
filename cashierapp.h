@@ -13,4 +13,5 @@ public:
 
 private:
 	Ui::CashierApp ui;
+	void closeTab(QWidget * prntTab);
 };

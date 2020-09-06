@@ -18,14 +18,28 @@ class RestaurantSys : public QMainWindow
 public:
     RestaurantSys(QWidget *parent = Q_NULLPTR);
     ~RestaurantSys();
+    struct HtabIndx {
+        int indx; QString tabId;
+    };
     void mouseMoveEvent(QMouseEvent * evnt) override ;
     void mousePressEvent(QMouseEvent* evnt) override;
     void resizeEvent(QResizeEvent* evnt) override;
-    void loadApplets(QWidget *prnt, QString appname);
 
 
 public slots:
     void maxandminWindow();
+    HtabIndx loadApplets(QWidget* prnt, QString appname);
+    void openCashierApplet();
+    void openAccountantApplet();
+    void openProcurementApplet();
+    void openHRApplet();
+    void closeCashierApplet();
+    void closeAccountantApplet();
+    void closeProcurementApplet();
+    void closeHRApplet();
+
+private:
+    void buttonMapper();
 
 private:
     CashierApp* csApp = new CashierApp();

@@ -1942,15 +1942,6 @@ QScrollBar::sub-page:vertical
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="cashier">
-         <attribute name="icon">
-          <iconset resource="procurementsys.qrc">
-           <normaloff>:/financeicons/textures/PNG/030-cash machine.png</normaloff>:/financeicons/textures/PNG/030-cash machine.png</iconset>
-         </attribute>
-         <attribute name="title">
-          <string>Cashier</string>
-         </attribute>
-        </widget>
        </widget>
       </item>
      </layout>
