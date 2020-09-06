@@ -11,24 +11,26 @@ RestaurantSys::RestaurantSys(QWidget *parent)
     this->setWindowOpacity(0.978);
     this->setStyleSheet("background-color: #00FFFFFF;");
     this->setWindowFlags(Qt::FramelessWindowHint);
-    this->setMouseTracking(true);
+    this->setMouseTracking(true); 
     this->setBaseSize({ 1020,650 });
-    ui.tabWidget->setDocumentMode(true);
+    //ui.tabWidget->setDocumentMode(true);
+
     QObject::connect(ui.expandButton, SIGNAL(clicked()), this, SLOT(maxandminWindow()));
     QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
+    QObject::connect(ui.pushButton, SIGNAL(clicked()), ui.tabWidget, SLOT(setCurrentIndex(2)));
+    QObject::connect(ui.minimizeButton, SIGNAL(clicked()), this, SLOT(showMinimized()));
 }
 
 RestaurantSys::~RestaurantSys()
 {
+    delete(&ui);
     delete(nFile);
 }
 
 void RestaurantSys::mouseMoveEvent (QMouseEvent* evnt)
 {
-    //qDebug() << evnt->pos();
-    if (evnt->buttons() & Qt::LeftButton)
+    if (evnt->buttons() & Qt::LeftButton && ui.custom_titlebar->underMouse())
     {
-        //qDebug() << "Left Button !";
         QPoint npos = evnt->pos();
         QPoint diff = npos - mpos;
         this->move(this->pos() + diff);
@@ -38,6 +40,11 @@ void RestaurantSys::mouseMoveEvent (QMouseEvent* evnt)
 void RestaurantSys::mousePressEvent(QMouseEvent* evnt)
 {
     mpos = evnt->pos();
+}
+
+void RestaurantSys::resizeEvent(QResizeEvent* evnt)
+{
+
 }
 
 void RestaurantSys::maxandminWindow()

@@ -88,12 +88,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <QtRcc Include="procurementsys.qrc" />
+    <QtUic Include="cashierapp.ui" />
     <QtUic Include="procurementsys.ui" />
     <QtMoc Include="procurementsys.h" />
+    <ClCompile Include="cashierapp.cpp" />
     <ClCompile Include="procurementsys.cpp" />
     <ClCompile Include="main.cpp" />
     <None Include="ProcurementSys.ico" />
     <ResourceCompile Include="ProcurementSys.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="cashierapp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

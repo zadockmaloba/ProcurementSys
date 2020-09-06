@@ -1,5 +1,11 @@
 <RCC>
   <qresource prefix="ProcurementSys"/>
+  <qresource prefix="stockimgs">
+    <file>textures/STOCK/pexels-andrea-piacquadio-3907161.jpg</file>
+    <file>textures/STOCK/pexels-energepiccom-159888.jpg</file>
+    <file>textures/STOCK/pexels-norma-mortenson-4391478.jpg</file>
+    <file>textures/STOCK/pexels-pixabay-53621.jpg</file>
+  </qresource>
   <qresource prefix="socialmediaicons">
     <file>textures/PNG/aim.png</file>
     <file>textures/PNG/ask.png</file>
@@ -43,5 +49,153 @@
     <file>textures/PNG/xanga.png</file>
     <file>textures/PNG/yahoo.png</file>
     <file>textures/PNG/youtube.png</file>
+  </qresource>
+  <qresource prefix="financeicons">
+    <file>textures/PNG/001-bank.png</file>
+    <file>textures/PNG/002-presentation.png</file>
+    <file>textures/PNG/003-line graphic.png</file>
+    <file>textures/PNG/004-barrel.png</file>
+    <file>textures/PNG/005-cheque.png</file>
+    <file>textures/PNG/005-id card.png</file>
+    <file>textures/PNG/006-finance.png</file>
+    <file>textures/PNG/006-money.png</file>
+    <file>textures/PNG/007-banknote.png</file>
+    <file>textures/PNG/007-receipt.png</file>
+    <file>textures/PNG/008-credit card.png</file>
+    <file>textures/PNG/008-payment method.png</file>
+    <file>textures/PNG/009-folder.png</file>
+    <file>textures/PNG/009-send.png</file>
+    <file>textures/PNG/010-browser.png</file>
+    <file>textures/PNG/010-jar.png</file>
+    <file>textures/PNG/011-businessman.png</file>
+    <file>textures/PNG/011-wallet.png</file>
+    <file>textures/PNG/012-online payment.png</file>
+    <file>textures/PNG/012-target.png</file>
+    <file>textures/PNG/013-bar chart.png</file>
+    <file>textures/PNG/013-hold.png</file>
+    <file>textures/PNG/014-search.png</file>
+    <file>textures/PNG/014-server.png</file>
+    <file>textures/PNG/015-briefcase.png</file>
+    <file>textures/PNG/015-wallet.png</file>
+    <file>textures/PNG/016-factory.png</file>
+    <file>textures/PNG/016-graphics.png</file>
+    <file>textures/PNG/017-label.png</file>
+    <file>textures/PNG/017-strategy.png</file>
+    <file>textures/PNG/018-bank.png</file>
+    <file>textures/PNG/018-mortgage loan.png</file>
+    <file>textures/PNG/019-economist.png</file>
+    <file>textures/PNG/019-rating.png</file>
+    <file>textures/PNG/020-bank.png</file>
+    <file>textures/PNG/020-global network.png</file>
+    <file>textures/PNG/021-archive.png</file>
+    <file>textures/PNG/021-strategy.png</file>
+    <file>textures/PNG/022-balance.png</file>
+    <file>textures/PNG/022-tax.png</file>
+    <file>textures/PNG/023-atm.png</file>
+    <file>textures/PNG/023-money bag.png</file>
+    <file>textures/PNG/024-laptop.png</file>
+    <file>textures/PNG/024-process.png</file>
+    <file>textures/PNG/025-financial.png</file>
+    <file>textures/PNG/025-medal.png</file>
+    <file>textures/PNG/026-cloud.png</file>
+    <file>textures/PNG/026-drawer.png</file>
+    <file>textures/PNG/027-accounting.png</file>
+    <file>textures/PNG/027-tie.png</file>
+    <file>textures/PNG/028-investment.png</file>
+    <file>textures/PNG/028-umbrella.png</file>
+    <file>textures/PNG/029-credit.png</file>
+    <file>textures/PNG/029-email.png</file>
+    <file>textures/PNG/030-cash machine.png</file>
+    <file>textures/PNG/030-return of investment.png</file>
+    <file>textures/PNG/031-time is money.png</file>
+    <file>textures/PNG/031-time.png</file>
+    <file>textures/PNG/032-idea.png</file>
+    <file>textures/PNG/032-summit.png</file>
+    <file>textures/PNG/033-bag.png</file>
+    <file>textures/PNG/033-megaphone.png</file>
+    <file>textures/PNG/034-gold.png</file>
+    <file>textures/PNG/034-pie chart.png</file>
+    <file>textures/PNG/035-cash.png</file>
+    <file>textures/PNG/035-smartphone.png</file>
+    <file>textures/PNG/036-gold ingot.png</file>
+    <file>textures/PNG/036-password.png</file>
+    <file>textures/PNG/037-balance.png</file>
+    <file>textures/PNG/037-idea.png</file>
+    <file>textures/PNG/038-chair.png</file>
+    <file>textures/PNG/038-Mining.png</file>
+    <file>textures/PNG/039-digital money.png</file>
+    <file>textures/PNG/039-investment.png</file>
+    <file>textures/PNG/040-line graph.png</file>
+    <file>textures/PNG/040-manager.png</file>
+    <file>textures/PNG/041-digital wallet.png</file>
+    <file>textures/PNG/041-goal.png</file>
+    <file>textures/PNG/042-building.png</file>
+    <file>textures/PNG/042-currency.png</file>
+    <file>textures/PNG/043-interest rate.png</file>
+    <file>textures/PNG/043-shield.png</file>
+    <file>textures/PNG/044-bar chart.png</file>
+    <file>textures/PNG/044-hammer.png</file>
+    <file>textures/PNG/045-bar graph.png</file>
+    <file>textures/PNG/045-searching.png</file>
+    <file>textures/PNG/046-rank.png</file>
+    <file>textures/PNG/046-safebox.png</file>
+    <file>textures/PNG/047-business report.png</file>
+    <file>textures/PNG/047-strategy.png</file>
+    <file>textures/PNG/048-money bag.png</file>
+    <file>textures/PNG/048-money.png</file>
+    <file>textures/PNG/049-checked.png</file>
+    <file>textures/PNG/049-wallet.png</file>
+    <file>textures/PNG/050-pin.png</file>
+    <file>textures/PNG/050-robot.png</file>
+    <file>textures/PNG/001-bank.png</file>
+    <file>textures/PNG/002-presentation.png</file>
+    <file>textures/PNG/003-line graphic.png</file>
+    <file>textures/PNG/004-barrel.png</file>
+    <file>textures/PNG/005-cheque.png</file>
+    <file>textures/PNG/006-finance.png</file>
+    <file>textures/PNG/007-receipt.png</file>
+    <file>textures/PNG/008-payment method.png</file>
+    <file>textures/PNG/009-send.png</file>
+    <file>textures/PNG/010-jar.png</file>
+    <file>textures/PNG/011-businessman.png</file>
+    <file>textures/PNG/012-online payment.png</file>
+    <file>textures/PNG/013-hold.png</file>
+    <file>textures/PNG/014-search.png</file>
+    <file>textures/PNG/015-wallet.png</file>
+    <file>textures/PNG/016-graphics.png</file>
+    <file>textures/PNG/017-label.png</file>
+    <file>textures/PNG/018-mortgage loan.png</file>
+    <file>textures/PNG/019-economist.png</file>
+    <file>textures/PNG/020-bank.png</file>
+    <file>textures/PNG/021-strategy.png</file>
+    <file>textures/PNG/022-tax.png</file>
+    <file>textures/PNG/023-atm.png</file>
+    <file>textures/PNG/024-laptop.png</file>
+    <file>textures/PNG/025-financial.png</file>
+    <file>textures/PNG/026-cloud.png</file>
+    <file>textures/PNG/027-accounting.png</file>
+    <file>textures/PNG/028-investment.png</file>
+    <file>textures/PNG/029-credit.png</file>
+    <file>textures/PNG/030-cash machine.png</file>
+    <file>textures/PNG/031-time is money.png</file>
+    <file>textures/PNG/032-summit.png</file>
+    <file>textures/PNG/033-bag.png</file>
+    <file>textures/PNG/034-gold.png</file>
+    <file>textures/PNG/035-cash.png</file>
+    <file>textures/PNG/036-password.png</file>
+    <file>textures/PNG/037-idea.png</file>
+    <file>textures/PNG/038-Mining.png</file>
+    <file>textures/PNG/039-digital money.png</file>
+    <file>textures/PNG/040-line graph.png</file>
+    <file>textures/PNG/041-digital wallet.png</file>
+    <file>textures/PNG/042-currency.png</file>
+    <file>textures/PNG/043-interest rate.png</file>
+    <file>textures/PNG/044-bar chart.png</file>
+    <file>textures/PNG/045-bar graph.png</file>
+    <file>textures/PNG/046-safebox.png</file>
+    <file>textures/PNG/047-business report.png</file>
+    <file>textures/PNG/048-money bag.png</file>
+    <file>textures/PNG/049-wallet.png</file>
+    <file>textures/PNG/050-robot.png</file>
   </qresource>
 </RCC>

@@ -6,6 +6,7 @@
 #include <qdebug.h>
 #include <qmouseeventtransition.h>
 #include <qevent.h>
+#include <qsizegrip.h>
 
 
 class RestaurantSys : public QMainWindow
@@ -17,6 +18,7 @@ public:
     ~RestaurantSys();
     void mouseMoveEvent(QMouseEvent * evnt) override ;
     void mousePressEvent(QMouseEvent* evnt) override;
+    void resizeEvent(QResizeEvent* evnt) override;
 
 public slots:
     void maxandminWindow();
