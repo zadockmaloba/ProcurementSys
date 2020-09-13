@@ -89,9 +89,23 @@
   <ItemGroup>
     <QtRcc Include="procurementsys.qrc" />
     <QtUic Include="cashierapp.ui" />
+    <QtUic Include="csrclearbill.ui" />
+    <QtUic Include="csreditbill.ui" />
+    <QtUic Include="csrendday.ui" />
+    <QtUic Include="csrmergebill.ui" />
+    <QtUic Include="csrnewbill.ui" />
+    <QtUic Include="csrstartday.ui" />
+    <QtUic Include="csrvoidbill.ui" />
     <QtUic Include="procurementsys.ui" />
     <QtMoc Include="procurementsys.h" />
     <ClCompile Include="cashierapp.cpp" />
+    <ClCompile Include="csrclearbill.cpp" />
+    <ClCompile Include="csreditbill.cpp" />
+    <ClCompile Include="csrendday.cpp" />
+    <ClCompile Include="csrmergebill.cpp" />
+    <ClCompile Include="csrnewbill.cpp" />
+    <ClCompile Include="csrstartday.cpp" />
+    <ClCompile Include="csrvoidbill.cpp" />
     <ClCompile Include="procurementsys.cpp" />
     <ClCompile Include="main.cpp" />
     <None Include="ProcurementSys.ico" />
@@ -101,6 +115,13 @@
     <QtMoc Include="cashierapp.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="csrnewbill.h" />
+    <QtMoc Include="csreditbill.h" />
+    <QtMoc Include="csrclearbill.h" />
+    <QtMoc Include="csrvoidbill.h" />
+    <QtMoc Include="csrmergebill.h" />
+    <QtMoc Include="csrstartday.h" />
+    <QtMoc Include="csrendday.h" />
     <ClInclude Include="global_custom_widgets.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -22,6 +22,9 @@
       <Extensions>qrc;*</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
+    <Filter Include="Casier Form Classes">
+      <UniqueIdentifier>{3ff6c438-5d5b-4f96-94d3-988af6ae2c18}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="procurementsys.qrc">
@@ -50,14 +53,77 @@
     <ClCompile Include="cashierapp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="csrnewbill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="csreditbill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="csrclearbill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="csrvoidbill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="csrmergebill.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="csrstartday.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="csrendday.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="cashierapp.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="csrnewbill.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="csreditbill.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="csrclearbill.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="csrvoidbill.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="csrmergebill.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="csrstartday.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="csrendday.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="cashierapp.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="csrnewbill.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="csreditbill.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="csrclearbill.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="csrvoidbill.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="csrmergebill.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="csrstartday.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="csrendday.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

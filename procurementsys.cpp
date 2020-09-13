@@ -11,9 +11,11 @@ RestaurantSys::RestaurantSys(QWidget *parent)
     this->setWindowOpacity(0.978);
     this->setStyleSheet("background-color: #00FFFFFF;");
     this->setWindowFlags(Qt::FramelessWindowHint);
+    this->setAttribute(Qt::WA_Resized);
     this->setMouseTracking(true); 
     this->setBaseSize({ 1020,650 });
-    this->loadApplets(new CashierApp, "zApp");
+
+    ui.tabWidget->tabBar()->setAttribute(Qt::WA_DeleteOnClose);
 
     QObject::connect(ui.expandButton, SIGNAL(clicked()), this, SLOT(maxandminWindow()));
     QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
