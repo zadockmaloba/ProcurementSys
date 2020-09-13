@@ -2,6 +2,7 @@
 
 #include <QWidget>
 #include "ui_cashierapp.h"
+#include "csr_include.h"
 
 class CashierApp : public QWidget
 {

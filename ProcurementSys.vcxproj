@@ -122,6 +122,7 @@
     <QtMoc Include="csrmergebill.h" />
     <QtMoc Include="csrstartday.h" />
     <QtMoc Include="csrendday.h" />
+    <ClInclude Include="csr_include.h" />
     <ClInclude Include="global_custom_widgets.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

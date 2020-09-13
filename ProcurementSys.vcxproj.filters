@@ -131,5 +131,8 @@
     <ClInclude Include="global_custom_widgets.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="csr_include.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
