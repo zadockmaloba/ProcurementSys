@@ -18,6 +18,7 @@ RestaurantSys::RestaurantSys(QWidget *parent)
     QObject::connect(ui.expandButton, SIGNAL(clicked()), this, SLOT(maxandminWindow()));
     QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ui.minimizeButton, SIGNAL(clicked()), this, SLOT(showMinimized()));
+    connect(ui.tabWidget->tabBar(), &QTabBar::tabCloseRequested, ui.tabWidget->tabBar(), &QTabBar::removeTab);
 
     this->buttonMapper();
 }
@@ -73,18 +74,22 @@ void RestaurantSys::openHRApplet()
 
 void RestaurantSys::closeCashierApplet()
 {
+    //defragmented
 }
 
 void RestaurantSys::closeAccountantApplet()
 {
+    //defragmented
 }
 
 void RestaurantSys::closeProcurementApplet()
 {
+    //defragmented
 }
 
 void RestaurantSys::closeHRApplet()
 {
+    //defragmented
 }
 
 void RestaurantSys::buttonMapper()
