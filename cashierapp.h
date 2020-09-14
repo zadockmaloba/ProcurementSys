@@ -25,4 +25,5 @@ private:
 
 private:
 	csrNewBill* newBill = new csrNewBill();
+	csrEditBill* edit_Bill = new	csrEditBill();
 };
