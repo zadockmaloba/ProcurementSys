@@ -6,6 +6,8 @@ CashierApp::CashierApp(QWidget *parent)
 	ui.setupUi(this);
 	this->setAttribute(Qt::WA_DeleteOnClose);
 
+	ui.directCompos->setLayout(new QGridLayout);
+
 	connect(ui.pushButton, SIGNAL(pressed()), this, SLOT(createNewBill()));
 	connect(ui.pushButton_2, SIGNAL(pressed()), this, SLOT(editBill()));
 }
@@ -20,8 +22,8 @@ CashierApp::~CashierApp()
 
 void CashierApp::editBill()
 {
-	ui.directCompos->setLayout(new QGridLayout);
-	ui.directCompos->layout()->addWidget(edit_Bill);
+	this->closeGridWidgets();
+	ui.directCompos->layout()->addWidget(new csrEditBill);
 }
 
 void CashierApp::clearBill()
@@ -38,11 +40,22 @@ void CashierApp::voidBill()
 
 void CashierApp::createNewBill()
 {
-	ui.directCompos->setLayout(new QGridLayout);
-	ui.directCompos->layout()->addWidget(newBill);
+	this->closeGridWidgets();
+	ui.directCompos->layout()->addWidget(new csrNewBill);
 }
 
 void CashierApp::closeTab(QWidget* prntTab)
 {
 	
+}
+
+void CashierApp::closeGridWidgets()
+{
+	QLayoutItem* xch;
+	for(int i=0; i <= ui.directCompos->layout()->children().size(); i++)
+	if ((xch = ui.directCompos->layout()->takeAt(i)) != nullptr)
+	{
+		delete xch->widget();
+		delete xch;
+	}
 }

@@ -22,6 +22,7 @@ public slots:
 private:
 	Ui::CashierApp ui;
 	void closeTab(QWidget * prntTab);
+	void closeGridWidgets();
 
 private:
 	csrNewBill* newBill = new csrNewBill();

@@ -78,19 +78,34 @@
        </item>
        <item>
         <widget class="QTreeWidget" name="treeWidget">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="uniformRowHeights">
+          <bool>true</bool>
+         </property>
+         <property name="animated">
+          <bool>true</bool>
+         </property>
+         <property name="headerHidden">
+          <bool>false</bool>
+         </property>
          <column>
           <property name="text">
-           <string>1</string>
+           <string>Bill Number</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>New Column</string>
+           <string>No. of Guests</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>New Column</string>
+           <string>Menu Type</string>
           </property>
          </column>
          <column>
@@ -108,6 +123,16 @@
           <property name="text">
            <string>Gourmet Safari</string>
           </property>
+          <item>
+           <property name="text">
+            <string>New Subitem</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>New Subitem</string>
+            </property>
+           </item>
+          </item>
          </item>
         </widget>
        </item>
