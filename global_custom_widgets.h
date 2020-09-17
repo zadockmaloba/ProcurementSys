@@ -4,3 +4,4 @@
 
 
 #include "cashierapp.h"
+#include "storeapp.h"

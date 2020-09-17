@@ -87,6 +87,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="storeapp.cpp" />
     <QtRcc Include="procurementsys.qrc" />
     <QtUic Include="cashierapp.ui" />
     <QtUic Include="csrclearbill.ui" />
@@ -109,12 +110,14 @@
     <ClCompile Include="procurementsys.cpp" />
     <ClCompile Include="main.cpp" />
     <None Include="ProcurementSys.ico" />
+    <QtUic Include="storeapp.ui" />
     <ResourceCompile Include="ProcurementSys.rc" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="cashierapp.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="storeapp.h" />
     <QtMoc Include="csrnewbill.h" />
     <QtMoc Include="csreditbill.h" />
     <QtMoc Include="csrclearbill.h" />

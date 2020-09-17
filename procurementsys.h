@@ -33,6 +33,7 @@ public slots:
     void openAccountantApplet();
     void openProcurementApplet();
     void openHRApplet();
+    void openStoreMngmt();
     void closeCashierApplet();
     void closeAccountantApplet();
     void closeProcurementApplet();

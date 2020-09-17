@@ -59,7 +59,8 @@ RestaurantSys::HtabIndx RestaurantSys::loadApplets(QWidget *prnt, QString appnam
 
 void RestaurantSys::openCashierApplet()
 {
-    this->loadApplets(new CashierApp, "cashier");
+    HtabIndx htemp = this->loadApplets(new CashierApp, "Cashier");
+    ui.tabWidget->setCurrentIndex(htemp.indx);
 }
 
 void RestaurantSys::openAccountantApplet()
@@ -72,6 +73,12 @@ void RestaurantSys::openProcurementApplet()
 
 void RestaurantSys::openHRApplet()
 {
+}
+
+void RestaurantSys::openStoreMngmt()
+{
+    HtabIndx htemp = this->loadApplets(new StoreApp, "Store Management");
+    ui.tabWidget->setCurrentIndex(htemp.indx);
 }
 
 void RestaurantSys::closeCashierApplet()
@@ -97,6 +104,7 @@ void RestaurantSys::closeHRApplet()
 void RestaurantSys::buttonMapper()
 {
     QObject::connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(openCashierApplet()));
+    QObject::connect(ui.pushButton_13, SIGNAL(clicked()), this, SLOT(openStoreMngmt()));
 }
 
 void RestaurantSys::maxandminWindow()

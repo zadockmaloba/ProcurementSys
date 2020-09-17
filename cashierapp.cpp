@@ -10,6 +10,7 @@ CashierApp::CashierApp(QWidget *parent)
 
 	connect(ui.pushButton, SIGNAL(pressed()), this, SLOT(createNewBill()));
 	connect(ui.pushButton_2, SIGNAL(pressed()), this, SLOT(editBill()));
+	connect(ui.pushButton_5, SIGNAL(pressed()), this, SLOT(mergeBill()));
 }
 
 CashierApp::~CashierApp()
@@ -32,6 +33,8 @@ void CashierApp::clearBill()
 
 void CashierApp::mergeBill()
 {
+	this->closeGridWidgets();
+	ui.directCompos->layout()->addWidget(new csrMergeBill);
 }
 
 void CashierApp::voidBill()
