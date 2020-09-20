@@ -29,6 +29,7 @@ public:
 public slots:
     void maxandminWindow();
     HtabIndx loadApplets(QWidget* prnt, QString appname);
+    void closeApplets(int hindx);
     void openCashierApplet();
     void openAccountantApplet();
     void openProcurementApplet();
@@ -38,12 +39,15 @@ public slots:
     void closeAccountantApplet();
     void closeProcurementApplet();
     void closeHRApplet();
+    void deleteWidgetChildren(QWidget* pWidget);
 
 private:
     void buttonMapper();
+    void garbageCollector();
 
 private:
     CashierApp* csApp = new CashierApp();
+    StoreApp* strApp = new StoreApp();
     Ui::ProcurementSysClass ui;
     QFile* nFile = new QFile("qss/zedqss/zed.qss");
     QPoint mpos;

@@ -21,6 +21,7 @@ RestaurantSys::RestaurantSys(QWidget *parent)
     QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ui.minimizeButton, SIGNAL(clicked()), this, SLOT(showMinimized()));
     connect(ui.tabWidget->tabBar(), &QTabBar::tabCloseRequested, ui.tabWidget->tabBar(), &QTabBar::removeTab);
+    connect(ui.tabWidget->tabBar(), &QTabBar::tabCloseRequested, this, &RestaurantSys::closeApplets);
 
     this->buttonMapper();
 }
@@ -28,6 +29,7 @@ RestaurantSys::RestaurantSys(QWidget *parent)
 RestaurantSys::~RestaurantSys()
 {
     delete(csApp);
+    delete(strApp);
     delete(&ui);
     delete(nFile);
 }
@@ -55,6 +57,12 @@ void RestaurantSys::resizeEvent(QResizeEvent* evnt)
 RestaurantSys::HtabIndx RestaurantSys::loadApplets(QWidget *prnt, QString appname)
 {
     return { ui.tabWidget->addTab(prnt, appname), appname };
+}
+
+void RestaurantSys::closeApplets(int hindx)
+{
+    this->deleteWidgetChildren( ui.tabWidget->widget(hindx) );
+    //delete(ui.tabWidget->widget(hindx));
 }
 
 void RestaurantSys::openCashierApplet()
@@ -101,10 +109,24 @@ void RestaurantSys::closeHRApplet()
     //defragmented
 }
 
+void RestaurantSys::deleteWidgetChildren(QWidget* pWidget)
+{
+    while (QWidget* w = pWidget->findChild<QWidget*>())
+        delete w;
+}
+
+
 void RestaurantSys::buttonMapper()
 {
     QObject::connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(openCashierApplet()));
     QObject::connect(ui.pushButton_13, SIGNAL(clicked()), this, SLOT(openStoreMngmt()));
+}
+
+void RestaurantSys::garbageCollector()
+{
+    for (QObject* n : ui.tabWidget->children()) {
+        delete(n);
+    }
 }
 
 void RestaurantSys::maxandminWindow()
