@@ -19,7 +19,7 @@ public:
     RestaurantSys(QWidget *parent = Q_NULLPTR);
     ~RestaurantSys();
     struct HtabIndx {
-        int indx; QString tabId;
+        int indx; QString tabId; QWidget* prnt;
     };
     void mouseMoveEvent(QMouseEvent * evnt) override ;
     void mousePressEvent(QMouseEvent* evnt) override;
@@ -46,10 +46,12 @@ private:
     void garbageCollector();
 
 private:
+    std::vector<HtabIndx> LstTabIndx;
     CashierApp* csApp = new CashierApp();
     StoreApp* strApp = new StoreApp();
     Ui::ProcurementSysClass ui;
     QFile* nFile = new QFile("qss/zedqss/zed.qss");
     QPoint mpos;
     bool maxwin;
+    int indxcount;
 };

@@ -4,7 +4,7 @@ CashierApp::CashierApp(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
-	this->setAttribute(Qt::WA_DeleteOnClose);
+	//this->setAttribute(Qt::WA_DeleteOnClose);
 
 	ui.directCompos->setLayout(new QGridLayout);
 
