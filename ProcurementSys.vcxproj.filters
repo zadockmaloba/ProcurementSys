@@ -80,6 +80,9 @@
     <ClCompile Include="strstock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DbInterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="cashierapp.h">
@@ -150,6 +153,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="csr_include.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DbInterface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

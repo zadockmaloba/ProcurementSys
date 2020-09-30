@@ -47,6 +47,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'">
   </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\HP\Documents\Major_Projects\NaiSys\Naisys Procurement Suite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\HP\Documents\Major_Projects\NaiSys\Naisys Procurement Suite\ProcurementSys\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
     <QtInstall>Qt5</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
@@ -87,6 +96,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DbInterface.cpp" />
     <ClCompile Include="storeapp.cpp" />
     <ClCompile Include="strstock.cpp" />
     <QtRcc Include="procurementsys.qrc" />
@@ -129,7 +139,13 @@
     <QtMoc Include="csrstartday.h" />
     <QtMoc Include="csrendday.h" />
     <ClInclude Include="csr_include.h" />
+    <ClInclude Include="DbInterface.h" />
     <ClInclude Include="global_custom_widgets.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NaiSys_DbDriver\NaiSys_DbDriver.vcxproj">
+      <Project>{0513a739-fe05-4b08-bc3d-61ae261f0fc8}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
