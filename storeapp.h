@@ -3,6 +3,7 @@
 #include <QWidget>
 #include "ui_storeapp.h"
 #include "strstock.h"
+#include "strtransfer.h"
 
 class StoreApp : public QWidget
 {

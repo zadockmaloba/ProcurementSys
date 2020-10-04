@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\HP\Documents\Major_Projects\NaiSys\Naisys Procurement Suite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\HP\Documents\Major_Projects\NaiSys\Naisys Procurement Suite;.\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>C:\Users\HP\Documents\Major_Projects\NaiSys\Naisys Procurement Suite\ProcurementSys\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -99,6 +99,7 @@
     <ClCompile Include="DbInterface.cpp" />
     <ClCompile Include="storeapp.cpp" />
     <ClCompile Include="strstock.cpp" />
+    <ClCompile Include="strtransfer.cpp" />
     <QtRcc Include="procurementsys.qrc" />
     <QtUic Include="cashierapp.ui" />
     <QtUic Include="csrclearbill.ui" />
@@ -123,12 +124,14 @@
     <None Include="ProcurementSys.ico" />
     <QtUic Include="storeapp.ui" />
     <QtUic Include="strstock.ui" />
+    <QtUic Include="strtransfer.ui" />
     <ResourceCompile Include="ProcurementSys.rc" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="cashierapp.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="strtransfer.h" />
     <QtMoc Include="strstock.h" />
     <QtMoc Include="storeapp.h" />
     <QtMoc Include="csrnewbill.h" />

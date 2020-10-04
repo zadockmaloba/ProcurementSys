@@ -29,7 +29,7 @@ RestaurantSys::~RestaurantSys()
 {
     delete(csApp);
     delete(strApp);
-    delete(&ui);
+    //delete(&ui);
     delete(nFile);
 }
 

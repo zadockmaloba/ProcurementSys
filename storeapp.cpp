@@ -8,6 +8,7 @@ StoreApp::StoreApp(QWidget *parent)
 	ui.screenDC->setLayout(new QGridLayout);
 
 	QObject::connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(viewStocks()));
+	QObject::connect(ui.pushButton_3, SIGNAL(clicked()), this, SLOT(transferItems()));
 }
 
 StoreApp::~StoreApp()
@@ -22,6 +23,8 @@ void StoreApp::editItems()
 
 void StoreApp::transferItems()
 {
+	closeGridWidgets();
+	ui.screenDC->layout()->addWidget(new StrTransfer);
 }
 
 void StoreApp::stockAnalysis()
