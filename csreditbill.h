@@ -2,6 +2,7 @@
 
 #include <QWidget>
 #include "ui_csreditbill.h"
+#include <NaiSys_DbDriver/DbDriver.h>
 
 class csrEditBill : public QWidget
 {
@@ -13,4 +14,5 @@ public:
 
 private:
 	Ui::csrEditBill ui;
+	DbDriver ndb;
 };

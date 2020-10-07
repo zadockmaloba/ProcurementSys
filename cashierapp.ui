@@ -421,6 +421,18 @@ QScrollBar::sub-page:vertical
 </string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>1</number>
+   </property>
+   <property name="bottomMargin">
+    <number>1</number>
+   </property>
    <item>
     <widget class="QScrollArea" name="cashierMenu">
      <property name="sizePolicy">
@@ -452,8 +464,8 @@ QScrollBar::sub-page:vertical
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>192</width>
-        <height>544</height>
+        <width>200</width>
+        <height>551</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -1468,8 +1480,8 @@ QScrollBar::sub-page:vertical
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>560</width>
-           <height>531</height>
+           <width>576</width>
+           <height>547</height>
           </rect>
          </property>
         </widget>
