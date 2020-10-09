@@ -11,6 +11,11 @@ class csrEditBill : public QWidget
 public:
 	csrEditBill(QWidget *parent = Q_NULLPTR);
 	~csrEditBill();
+	QString arrayToString(std::vector<std::string>& itmlist);
+
+public slots:
+	void addItems();
+	void removeItems();
 
 private:
 	Ui::csrEditBill ui;
