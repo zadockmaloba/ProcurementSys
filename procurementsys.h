@@ -7,6 +7,7 @@
 #include <qmouseeventtransition.h>
 #include <qevent.h>
 #include <qsizegrip.h>
+#include <qmenu.h>
 
 #include "global_custom_widgets.h"
 
@@ -40,6 +41,7 @@ public slots:
     void closeProcurementApplet();
     void closeHRApplet();
     void deleteWidgetChildren(QWidget* pWidget);
+    void customUserMenu(QPoint pos);
 
 private:
     void buttonMapper();

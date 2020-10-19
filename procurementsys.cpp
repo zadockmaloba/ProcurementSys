@@ -15,12 +15,14 @@ RestaurantSys::RestaurantSys(QWidget *parent)
     this->setBaseSize({ 1020,650 });
 
     ui.tabWidget->tabBar()->setAttribute(Qt::WA_DeleteOnClose);
+    ui.user_label->setContextMenuPolicy(Qt::CustomContextMenu);
 
     QObject::connect(ui.expandButton, SIGNAL(clicked()), this, SLOT(maxandminWindow()));
     QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ui.minimizeButton, SIGNAL(clicked()), this, SLOT(showMinimized()));
+    QObject::connect(ui.user_label, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(customUserMenu(QPoint)));
     //connect(ui.tabWidget->tabBar(), &QTabBar::tabCloseRequested, ui.tabWidget->tabBar(), &QTabBar::removeTab);
-    connect(ui.tabWidget->tabBar(), &QTabBar::tabCloseRequested, this, &RestaurantSys::closeApplets);
+    QObject::connect(ui.tabWidget->tabBar(), &QTabBar::tabCloseRequested, this, &RestaurantSys::closeApplets);
 
     this->buttonMapper();
 }
@@ -117,6 +119,19 @@ void RestaurantSys::deleteWidgetChildren(QWidget* pWidget)
     pWidget->setUpdatesEnabled(false);
     qDeleteAll(pWidget->findChildren<QWidget*>("", Qt::FindDirectChildrenOnly));
     pWidget->setUpdatesEnabled(true);
+}
+
+void RestaurantSys::customUserMenu(QPoint pos)
+{
+    QMenu* menu = new QMenu(this);
+    menu->setTitle("User : ");
+    QLineEdit* ld = new QLineEdit(menu);
+    menu->setPalette(this->palette());
+    menu->setStyleSheet("background-color: qlineargradient(spread : pad, x1 : 1, y1 : 1, x2 : 1, y2 : 0, stop : 0 rgba(108, 171, 147, 255), stop : 0.994318 rgba(186, 230, 230, 255)); border-radius : 6px;");
+    menu->addAction(new QAction("Action 1", this));
+    menu->addAction(new QAction("Action 2", this));
+    menu->addAction(new QAction("Action 3", this));
+    menu->popup(ui.user_label->mapToGlobal(pos += {1, 1}));
 }
 
 

@@ -46,7 +46,7 @@
         <x>0</x>
         <y>0</y>
         <width>752</width>
-        <height>258</height>
+        <height>218</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -80,6 +80,15 @@
         <widget class="QTreeView" name="treeView">
          <property name="styleSheet">
           <string notr="true"/>
+         </property>
+         <property name="uniformRowHeights">
+          <bool>true</bool>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <property name="animated">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -124,8 +133,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>363</width>
-           <height>278</height>
+           <width>380</width>
+           <height>296</height>
           </rect>
          </property>
          <layout class="QFormLayout" name="formLayout">

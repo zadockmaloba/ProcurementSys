@@ -20,4 +20,5 @@ public slots:
 private:
 	Ui::csrEditBill ui;
 	DbDriver ndb;
+	QString currentbill;
 };
