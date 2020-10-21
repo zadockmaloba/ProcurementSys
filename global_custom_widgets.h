@@ -7,3 +7,4 @@
 
 #include "cashierapp.h"
 #include "storeapp.h"
+#include "usercard.h"

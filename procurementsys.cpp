@@ -123,9 +123,9 @@ void RestaurantSys::deleteWidgetChildren(QWidget* pWidget)
 
 void RestaurantSys::customUserMenu(QPoint pos)
 {
+    //A lot of work needs to be done regarding the username context menu
     QMenu* menu = new QMenu(this);
     menu->setTitle("User : ");
-    QLineEdit* ld = new QLineEdit(menu);
     menu->setPalette(this->palette());
     menu->setStyleSheet("background-color: qlineargradient(spread : pad, x1 : 1, y1 : 1, x2 : 1, y2 : 0, stop : 0 rgba(108, 171, 147, 255), stop : 0.994318 rgba(186, 230, 230, 255)); border-radius : 6px;");
     menu->addAction(new QAction("Action 1", this));

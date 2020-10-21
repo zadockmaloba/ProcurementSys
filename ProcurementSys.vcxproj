@@ -100,6 +100,7 @@
     <ClCompile Include="storeapp.cpp" />
     <ClCompile Include="strstock.cpp" />
     <ClCompile Include="strtransfer.cpp" />
+    <ClCompile Include="usercard.cpp" />
     <QtRcc Include="procurementsys.qrc" />
     <QtUic Include="cashierapp.ui" />
     <QtUic Include="csrclearbill.ui" />
@@ -125,12 +126,14 @@
     <QtUic Include="storeapp.ui" />
     <QtUic Include="strstock.ui" />
     <QtUic Include="strtransfer.ui" />
+    <QtUic Include="usercard.ui" />
     <ResourceCompile Include="ProcurementSys.rc" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="cashierapp.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="usercard.h" />
     <QtMoc Include="strtransfer.h" />
     <QtMoc Include="strstock.h" />
     <QtMoc Include="storeapp.h" />
