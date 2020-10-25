@@ -12,10 +12,14 @@ public:
 	csrNewBill(QWidget *parent = Q_NULLPTR);
 	~csrNewBill();
 
+private://private methods
+	int getCurrBillNumber();
+
 public slots:
 	void commitNewBill();
+	void showBillNumber();
 
-private:
+private://private variables
 	Ui::csrNewBill ui;
 	DbDriver ndb;
 };
