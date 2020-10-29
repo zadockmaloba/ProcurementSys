@@ -27,15 +27,18 @@ QString csrEditBill::arrayToString(std::vector<std::string>& itmlist)
 
 void csrEditBill::addItems()
 {
-	QModelIndex indx { ui.treeView->currentIndex()};
-	QString billno { ui.treeView->model()->data(indx).toString() };
+	QModelIndex indx{ ui.treeView->currentIndex() };
+	QString billno{ ui.treeView->model()->data(indx).toString() };
 	currentbill = billno;
-	//qDebug() << "DEBUG BILL NO : " + billno;
+
+	ui.lineEdit_2->setText(billno);
+	ui.comboBox_3->setModel(ndb.runQuerry("select item_name from menuitems"));
+
+	qDebug() << "DEBUG BILL NO : " + billno;
+	qDebug() << "TreeView index : " << indx;
 
 	QString itm_name = ui.comboBox_3->currentText();
 	QString itm_quantity; // quantity will be taken from spinbox
-
-	ndb.runQuerry("");
 }
 
 void csrEditBill::removeItems()
