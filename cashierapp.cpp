@@ -15,9 +15,9 @@ CashierApp::CashierApp(QWidget *parent)
 
 CashierApp::~CashierApp()
 {
-	delete(&ui);
 	delete(newBill);
 	delete(ui.directCompos->layout());
+	delete(&ui);
 	delete(this);
 }
 

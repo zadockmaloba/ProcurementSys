@@ -1,4 +1,7 @@
 #pragma once
+
+#include <Windows.h>
+
 #include <qaction.h>
 #include <qtabbar.h>
 #include <vector>

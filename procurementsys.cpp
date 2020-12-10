@@ -17,6 +17,8 @@ RestaurantSys::RestaurantSys(QWidget *parent)
     ui.tabWidget->tabBar()->setAttribute(Qt::WA_DeleteOnClose);
     ui.user_label->setContextMenuPolicy(Qt::CustomContextMenu);
 
+    //this->setAcrylicOpacity();
+
     QObject::connect(ui.expandButton, SIGNAL(clicked()), this, SLOT(maxandminWindow()));
     QObject::connect(ui.closeButton, SIGNAL(clicked()), this, SLOT(close()));
     QObject::connect(ui.minimizeButton, SIGNAL(clicked()), this, SLOT(showMinimized()));
@@ -31,8 +33,8 @@ RestaurantSys::~RestaurantSys()
 {
     delete(csApp);
     delete(strApp);
-    //delete(&ui);
     delete(nFile);
+    //delete(&ui);
 }
 
 void RestaurantSys::mouseMoveEvent (QMouseEvent* evnt)
@@ -146,6 +148,42 @@ void RestaurantSys::garbageCollector()
     for (QObject* n : ui.tabWidget->children()) {
         delete(n);
     }
+}
+
+void RestaurantSys::setAcrylicOpacity()
+{
+    const HINSTANCE hModule = LoadLibrary(TEXT("user32.dll"));
+    HWND m_hwnd = reinterpret_cast<HWND>(this->winId());
+    if (hModule) {
+        struct ACCENTPOLICY {
+            int nAccentState;
+            int nFlags;
+            int nColor;
+            int nAnimationId;
+        };
+        struct WINCOMPATTRDATA {
+            int nAttribute;
+            PVOID pData;
+            ULONG ulDataSize;
+        };
+        enum class Accent {
+            DISABLED = 0,
+            GRADIENT = 1,
+            TRANSPARENTGRADIENT = 2,
+            BLURBEHIND = 3,
+            ACRYLIC = 4,
+            INVALID = 5
+        };
+        typedef BOOL(WINAPI* pSetWindowCompositionAttribute)(HWND, WINCOMPATTRDATA*);
+        const pSetWindowCompositionAttribute SetWindowCompositionAttribute = (pSetWindowCompositionAttribute)GetProcAddress(hModule, "SetWindowCompositionAttribute");
+        if (SetWindowCompositionAttribute) {
+            ACCENTPOLICY policy = { 1, 0, 0, 0 }; // ACCENT_ENABLE_BLURBEHIND=3...
+            WINCOMPATTRDATA data = { 19, &policy, sizeof(ACCENTPOLICY) }; // WCA_ACCENT_POLICY=19
+            SetWindowCompositionAttribute(m_hwnd, &data);
+        }
+        FreeLibrary(hModule);
+    }
+
 }
 
 void RestaurantSys::maxandminWindow()

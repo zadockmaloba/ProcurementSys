@@ -46,6 +46,7 @@ public slots:
 private:
     void buttonMapper();
     void garbageCollector();
+    void setAcrylicOpacity();
 
 private:
     std::vector<HtabIndx> LstTabIndx;

@@ -8,6 +8,7 @@ csrEditBill::csrEditBill(QWidget *parent)
 	//ui.treeView_2->setModel((QAbstractItemModel*)ui.treeView->currentIndex().model());
 
 	QObject::connect(ui.pushButton, SIGNAL(pressed()), this, SLOT(addItems()));
+	//QObject::connect(ui.treeView, SIGNAL(dataChanged(QModelIndex, QModelIndex, QVector<int>)), this, SLOT(addItems()));
 }
 
 csrEditBill::~csrEditBill()

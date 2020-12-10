@@ -13,7 +13,8 @@ StoreApp::StoreApp(QWidget *parent)
 
 StoreApp::~StoreApp()
 {
-	
+	delete(&ui);
+	delete(this);
 }
 
 void StoreApp::editItems()
