@@ -1394,9 +1394,14 @@ QPushButton::pressed
          <bool>false</bool>
         </property>
         <property name="styleSheet">
-         <string notr="true">QWidget
+         <string notr="true">QToolTip
 {
-	border-radius: 0px;
+	
+	font: 75 8pt &quot;MS Shell Dlg 2&quot;;
+}
+QWidget
+{
+	border-radius: 5px;
 }
 QTabWidget::tab-bar {
 

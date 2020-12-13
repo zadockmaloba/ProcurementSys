@@ -434,6 +434,12 @@ QScrollBar::sub-page:vertical
       </property>
       <item>
        <widget class="QPushButton" name="pushButton_4">
+        <property name="toolTip">
+         <string>Finance settings</string>
+        </property>
+        <property name="whatsThis">
+         <string>Settings</string>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -445,6 +451,12 @@ QScrollBar::sub-page:vertical
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_5">
+        <property name="toolTip">
+         <string>Financial Analysis</string>
+        </property>
+        <property name="whatsThis">
+         <string>Financial Analysis</string>
+        </property>
         <property name="text">
          <string/>
         </property>
@@ -456,6 +468,12 @@ QScrollBar::sub-page:vertical
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_6">
+        <property name="toolTip">
+         <string>Banking</string>
+        </property>
+        <property name="whatsThis">
+         <string>Banking</string>
+        </property>
         <property name="text">
          <string/>
         </property>

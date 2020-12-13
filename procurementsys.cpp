@@ -7,7 +7,7 @@ RestaurantSys::RestaurantSys(QWidget *parent)
 
     this->setWindowTitle("NaiSys | RestaurantSys");
     this->setAttribute(Qt::WA_TranslucentBackground);
-    this->setWindowOpacity(0.978);
+    this->setWindowOpacity(0.998);
     this->setStyleSheet("background-color: #00FFFFFF;");
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->setAttribute(Qt::WA_Resized);
@@ -68,6 +68,12 @@ void RestaurantSys::closeApplets(int hindx)
     //ui.tabWidget->widget(hindx)->setUpdatesEnabled(false);
     this->deleteWidgetChildren(ui.tabWidget->widget(hindx));
     ui.tabWidget->tabBar()->removeTab(hindx);
+}
+
+void RestaurantSys::openHomePage()
+{
+    //indxcount = 0;
+    ui.tabWidget->setCurrentIndex(0);
 }
 
 void RestaurantSys::openCashierApplet()
@@ -146,6 +152,7 @@ void RestaurantSys::buttonMapper()
     QObject::connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(openCashierApplet()));
     QObject::connect(ui.pushButton_13, SIGNAL(clicked()), this, SLOT(openStoreMngmt()));
     QObject::connect(ui.pushButton_2, SIGNAL(clicked()), this, SLOT(openAccountantApplet()));
+    QObject::connect(ui.pushButton_9, SIGNAL(clicked()), this, SLOT(openHomePage()));
 }
 
 void RestaurantSys::garbageCollector()

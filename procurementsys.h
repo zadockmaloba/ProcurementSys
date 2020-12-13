@@ -31,6 +31,7 @@ public slots:
     void maxandminWindow();
     HtabIndx loadApplets(QWidget* prnt, QString appname);
     void closeApplets(int hindx);
+    void openHomePage();
     void openCashierApplet();
     void openAccountantApplet();
     void openProcurementApplet();
