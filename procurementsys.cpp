@@ -59,13 +59,13 @@ void RestaurantSys::resizeEvent(QResizeEvent* evnt)
 
 RestaurantSys::HtabIndx RestaurantSys::loadApplets(QWidget *prnt, QString appname)
 {
-    indxcount++;
+    indxcount += 1;
     return { ui.tabWidget->insertTab( indxcount ,prnt, appname), appname , prnt };
 }
 
 void RestaurantSys::closeApplets(int hindx)
 {
-    ui.tabWidget->widget(hindx)->setUpdatesEnabled(false);
+    //ui.tabWidget->widget(hindx)->setUpdatesEnabled(false);
     this->deleteWidgetChildren(ui.tabWidget->widget(hindx));
     ui.tabWidget->tabBar()->removeTab(hindx);
 }
@@ -73,7 +73,7 @@ void RestaurantSys::closeApplets(int hindx)
 void RestaurantSys::openCashierApplet()
 {
     LstTabIndx.push_back( this->loadApplets(new CashierApp, "Cashier"));
-    ui.tabWidget->setCurrentIndex(indxcount);
+    //ui.tabWidget->setCurrentIndex(indxcount);
 }
 
 void RestaurantSys::openAccountantApplet()
@@ -91,7 +91,7 @@ void RestaurantSys::openHRApplet()
 void RestaurantSys::openStoreMngmt()
 {
     HtabIndx htemp = this->loadApplets(new StoreApp, "Store Management");
-    ui.tabWidget->setCurrentIndex(indxcount);
+    //ui.tabWidget->setCurrentIndex(indxcount);
 }
 
 void RestaurantSys::closeCashierApplet()
@@ -117,10 +117,12 @@ void RestaurantSys::closeHRApplet()
 void RestaurantSys::deleteWidgetChildren(QWidget* pWidget)
 {
     while (QObject* w = pWidget->findChild<QObject*>())
-        delete (w) ;
-    pWidget->setUpdatesEnabled(false);
+        delete(w) ;
+   // pWidget->setUpdatesEnabled(false);
     qDeleteAll(pWidget->findChildren<QWidget*>("", Qt::FindDirectChildrenOnly));
-    pWidget->setUpdatesEnabled(true);
+    indxcount -= 1;
+    pWidget->close();
+   // pWidget->setUpdatesEnabled(true);
 }
 
 void RestaurantSys::customUserMenu(QPoint pos)
