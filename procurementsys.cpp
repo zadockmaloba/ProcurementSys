@@ -73,11 +73,13 @@ void RestaurantSys::closeApplets(int hindx)
 void RestaurantSys::openCashierApplet()
 {
     LstTabIndx.push_back( this->loadApplets(new CashierApp, "Cashier"));
-    //ui.tabWidget->setCurrentIndex(indxcount);
+    ui.tabWidget->setCurrentIndex(indxcount);
 }
 
 void RestaurantSys::openAccountantApplet()
 {
+    LstTabIndx.push_back(this->loadApplets(new FinanceApp, "Finance"));
+    ui.tabWidget->setCurrentIndex(indxcount);
 }
 
 void RestaurantSys::openProcurementApplet()
@@ -91,7 +93,7 @@ void RestaurantSys::openHRApplet()
 void RestaurantSys::openStoreMngmt()
 {
     HtabIndx htemp = this->loadApplets(new StoreApp, "Store Management");
-    //ui.tabWidget->setCurrentIndex(indxcount);
+    ui.tabWidget->setCurrentIndex(indxcount);
 }
 
 void RestaurantSys::closeCashierApplet()
@@ -143,6 +145,7 @@ void RestaurantSys::buttonMapper()
 {
     QObject::connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(openCashierApplet()));
     QObject::connect(ui.pushButton_13, SIGNAL(clicked()), this, SLOT(openStoreMngmt()));
+    QObject::connect(ui.pushButton_2, SIGNAL(clicked()), this, SLOT(openAccountantApplet()));
 }
 
 void RestaurantSys::garbageCollector()

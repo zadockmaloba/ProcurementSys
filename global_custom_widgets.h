@@ -10,4 +10,5 @@
 
 #include "cashierapp.h"
 #include "storeapp.h"
+#include "financeapp.h"
 #include "usercard.h"
