@@ -72,7 +72,6 @@ void RestaurantSys::closeApplets(int hindx)
 
 void RestaurantSys::openHomePage()
 {
-    //indxcount = 0;
     ui.tabWidget->setCurrentIndex(0);
 }
 
