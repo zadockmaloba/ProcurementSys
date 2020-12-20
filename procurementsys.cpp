@@ -93,11 +93,13 @@ void RestaurantSys::openProcurementApplet()
 
 void RestaurantSys::openHRApplet()
 {
+    LstTabIndx.push_back(this->loadApplets(new HRApp, "Human Resource"));
+    ui.tabWidget->setCurrentIndex(indxcount);
 }
 
 void RestaurantSys::openStoreMngmt()
 {
-    HtabIndx htemp = this->loadApplets(new StoreApp, "Store Management");
+    LstTabIndx.push_back(this->loadApplets(new StoreApp, "Store Management"));
     ui.tabWidget->setCurrentIndex(indxcount);
 }
 
@@ -151,6 +153,7 @@ void RestaurantSys::buttonMapper()
     QObject::connect(ui.pushButton, SIGNAL(clicked()), this, SLOT(openCashierApplet()));
     QObject::connect(ui.pushButton_13, SIGNAL(clicked()), this, SLOT(openStoreMngmt()));
     QObject::connect(ui.pushButton_2, SIGNAL(clicked()), this, SLOT(openAccountantApplet()));
+    QObject::connect(ui.pushButton_4, SIGNAL(clicked()), this, SLOT(openHRApplet()));
     QObject::connect(ui.pushButton_9, SIGNAL(clicked()), this, SLOT(openHomePage()));
 }
 

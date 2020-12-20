@@ -12,3 +12,4 @@
 #include "storeapp.h"
 #include "financeapp.h"
 #include "usercard.h"
+#include "hrapp.h"

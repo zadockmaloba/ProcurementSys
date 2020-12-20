@@ -10,3 +10,15 @@ StrTransfer::StrTransfer(QWidget *parent)
 StrTransfer::~StrTransfer()
 {
 }
+
+void StrTransfer::receiveItems()
+{
+	QString item_name = ui.comboBox->currentText();
+
+	ndb.runQuerry("");
+}
+
+void StrTransfer::issueItems()
+{
+	ndb.runQuerry("");
+}

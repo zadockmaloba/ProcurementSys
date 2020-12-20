@@ -92,6 +92,9 @@
     <ClCompile Include="financeapp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="hrapp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="cashierapp.h">
@@ -133,6 +136,9 @@
     <QtMoc Include="financeapp.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="hrapp.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="cashierapp.ui">
@@ -172,6 +178,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="financeapp.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="hrapp.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

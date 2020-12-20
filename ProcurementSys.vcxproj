@@ -98,6 +98,7 @@
   <ItemGroup>
     <ClCompile Include="DbInterface.cpp" />
     <ClCompile Include="financeapp.cpp" />
+    <ClCompile Include="hrapp.cpp" />
     <ClCompile Include="storeapp.cpp" />
     <ClCompile Include="strstock.cpp" />
     <ClCompile Include="strtransfer.cpp" />
@@ -112,6 +113,7 @@
     <QtUic Include="csrstartday.ui" />
     <QtUic Include="csrvoidbill.ui" />
     <QtUic Include="financeapp.ui" />
+    <QtUic Include="hrapp.ui" />
     <QtUic Include="procurementsys.ui" />
     <QtMoc Include="procurementsys.h" />
     <ClCompile Include="cashierapp.cpp" />
@@ -135,6 +137,7 @@
     <QtMoc Include="cashierapp.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="hrapp.h" />
     <QtMoc Include="usercard.h" />
     <QtMoc Include="strtransfer.h" />
     <QtMoc Include="strstock.h" />

@@ -12,6 +12,10 @@ public:
 	StrTransfer(QWidget *parent = Q_NULLPTR);
 	~StrTransfer();
 
+public slots:
+	void issueItems();
+	void receiveItems();
+
 private:
 	Ui::StrTransfer ui;
 	DbDriver ndb;
