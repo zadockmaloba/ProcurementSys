@@ -95,6 +95,9 @@
     <ClCompile Include="hrapp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="hrappemployeeview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="cashierapp.h">
@@ -139,6 +142,9 @@
     <QtMoc Include="hrapp.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="hrappemployeeview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="cashierapp.ui">
@@ -181,6 +187,9 @@
       <Filter>Form Files</Filter>
     </QtUic>
     <QtUic Include="hrapp.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="hrappemployeeview.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
