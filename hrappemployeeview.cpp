@@ -4,7 +4,6 @@ HRAppEmployeeView::HRAppEmployeeView(QWidget *parent)
 	: QWidget(parent), ndb("naisys_test","")
 {
 	ui.setupUi(this);
-	ui.cardPageScrollArea->setLayout(new QGridLayout);
 
 	loadEmployeeTableModel();
 
@@ -19,14 +18,7 @@ HRAppEmployeeView::~HRAppEmployeeView()
 
 void HRAppEmployeeView::closeGridWidgets()
 {
-	QLayoutItem* xch;
-	for (int i = 0; i <= ui.cardPageScrollArea->layout()->children().size(); i++)
-		if ((xch = ui.cardPageScrollArea->layout()->takeAt(i)) != nullptr)
-		{
-			delete xch->widget();
-			delete xch;
-		}
-	delete(ui.scrollAreaWidgetContents); //Whole Lotta Bugs !!!!!
+	
 }
 
 void HRAppEmployeeView::loadEmployeeTableModel()
@@ -36,7 +28,5 @@ void HRAppEmployeeView::loadEmployeeTableModel()
 
 void HRAppEmployeeView::loadEmployeeCardModel()
 {
-	this->closeGridWidgets();
-	for (int i = 0; i < 2; i++)
-		ui.cardPageScrollArea->layout()->addWidget(new HRAppEmployeeCard);
+	ui.listView->setModel(ndb.runQuerry("select emp_name from employees ;"));
 }
