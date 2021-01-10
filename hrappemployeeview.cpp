@@ -6,6 +6,7 @@ HRAppEmployeeView::HRAppEmployeeView(QWidget *parent)
 	ui.setupUi(this);
 
 	loadEmployeeTableModel();
+	loadEmployeeCardModel();
 
 	QObject::connect(ui.pushButton, &QPushButton::clicked, this, [=]() {ui.stackedWidget->setCurrentIndex(0); loadEmployeeTableModel(); });
 	QObject::connect(ui.pushButton_2, &QPushButton::clicked, this, [=]() {ui.stackedWidget->setCurrentIndex(1); loadEmployeeCardModel(); });

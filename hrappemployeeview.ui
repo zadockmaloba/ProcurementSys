@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>826</width>
-    <height>538</height>
+    <width>825</width>
+    <height>490</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1801,8 +1801,21 @@ QScrollBar::sub-page:vertical
           </property>
           <item>
            <widget class="QWidget" name="widget_2" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="styleSheet">
-             <string notr="true">font: 10pt &quot;Segoe MDL2 Assets&quot;;
+             <string notr="true">
+
+QWidget
+{
+	
+	background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(108, 171, 147, 255), stop:0.994318 rgba(186, 230, 230, 255));
+font: 10pt &quot;Segoe MDL2 Assets&quot;;
+}
 QPushButton
 {
 	background-color: #ff3333;
@@ -2619,6 +2632,18 @@ QScrollBar::sub-page:vertical
                 <string>Bio Data</string>
                </property>
                <layout class="QFormLayout" name="formLayout">
+                <property name="leftMargin">
+                 <number>1</number>
+                </property>
+                <property name="topMargin">
+                 <number>15</number>
+                </property>
+                <property name="rightMargin">
+                 <number>1</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>1</number>
+                </property>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label">
                   <property name="text">
@@ -2664,6 +2689,12 @@ QScrollBar::sub-page:vertical
              </item>
              <item row="0" column="1">
               <widget class="QGroupBox" name="groupBox_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="title">
                 <string>Company Info</string>
                </property>
@@ -2675,7 +2706,7 @@ QScrollBar::sub-page:vertical
                  <number>9</number>
                 </property>
                 <property name="topMargin">
-                 <number>1</number>
+                 <number>15</number>
                 </property>
                 <property name="bottomMargin">
                  <number>1</number>
@@ -3166,8 +3197,30 @@ QScrollBar::sub-page:vertical
                 <string>Notes</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="spacing">
+                 <number>1</number>
+                </property>
+                <property name="leftMargin">
+                 <number>1</number>
+                </property>
+                <property name="topMargin">
+                 <number>12</number>
+                </property>
+                <property name="rightMargin">
+                 <number>1</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>1</number>
+                </property>
                 <item>
-                 <widget class="QTextEdit" name="textEdit"/>
+                 <widget class="QTextEdit" name="textEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                 </widget>
                 </item>
                 <item>
                  <widget class="QPushButton" name="pushButton_3">
@@ -3177,7 +3230,20 @@ QScrollBar::sub-page:vertical
                  </widget>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="comboBox"/>
+                 <widget class="QComboBox" name="comboBox">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </widget>
@@ -3595,6 +3661,9 @@ QScrollBar::sub-page:vertical
                 <string>Contacts</string>
                </property>
                <layout class="QFormLayout" name="formLayout_3">
+                <property name="topMargin">
+                 <number>15</number>
+                </property>
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_12">
                   <property name="text">
