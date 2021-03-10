@@ -2,7 +2,7 @@
 
 #include <QWidget>
 #include "ui_csreditbill.h"
-#include <NaiSys_DbDriver/DbDriver.h>
+#include <dbdriver.h>
 
 class csrEditBill : public QWidget
 {

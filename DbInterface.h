@@ -1,5 +1,5 @@
 #pragma once
-#include <NaiSys_DbDriver/DbDriver.h>
+#include <dbdriver.h>
 #include <qwidget.h>
 
 class DbInterface

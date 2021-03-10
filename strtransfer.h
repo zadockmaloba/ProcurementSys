@@ -2,7 +2,7 @@
 
 #include <QWidget>
 #include "ui_strtransfer.h"
-#include <NaiSys_DbDriver/DbDriver.h>
+#include <dbdriver.h>
 
 class StrTransfer : public QWidget
 {

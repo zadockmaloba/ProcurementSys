@@ -2,7 +2,7 @@
 
 #include <QWidget>
 #include "ui_hrappemployeeview.h"
-#include <NaiSys_DbDriver/DbDriver.h>
+#include <dbdriver.h>
 #include "hrappemployeecard.h"
 
 class HRAppEmployeeView : public QWidget

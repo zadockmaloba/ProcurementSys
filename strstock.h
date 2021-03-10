@@ -2,7 +2,7 @@
 
 #include <QWidget>
 #include "ui_strstock.h"
-#include <NaiSys_DbDriver/DbDriver.h>
+#include <dbdriver.h>
 
 class strStock : public QWidget
 {

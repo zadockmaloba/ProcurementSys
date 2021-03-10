@@ -4,7 +4,7 @@
 #include "ui_procurementsys.h"
 #include <qfile.h>
 #include <qdebug.h>
-#include <qmouseeventtransition.h>
+//#include <qmouseeventtransition.h>
 #include <qevent.h>
 #include <qsizegrip.h>
 #include <qmenu.h>

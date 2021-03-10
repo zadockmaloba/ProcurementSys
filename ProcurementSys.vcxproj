@@ -160,11 +160,6 @@
     <QtMoc Include="financeapp.h" />
     <ClInclude Include="global_custom_widgets.h" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NaiSys_DbDriver\NaiSys_DbDriver.vcxproj">
-      <Project>{0513a739-fe05-4b08-bc3d-61ae261f0fc8}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />
