@@ -8,7 +8,8 @@ DESTDIR = ./Debug
 CONFIG += debug
 QT += widgets gui core sql
 HEADERS += "." \
-    dbdriver.h
+    dbdriver.h \
+    infosetup.h
 LIBS += -L"."
 DEPENDPATH += .
 MOC_DIR += GeneratedFiles/$(ConfigurationName)
@@ -18,4 +19,8 @@ RCC_DIR += GeneratedFiles
 include(RestaurantSys.pri)
 
 SOURCES += \
-    dbdriver.cpp
+    dbdriver.cpp \
+    infosetup.cpp
+
+FORMS += \
+    infosetup.ui

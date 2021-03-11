@@ -18,6 +18,11 @@ public:
     ~DbDriver();
 public:
     QSqlQueryModel* runQuerry(QString intr);
+private:
+    bool innitDB();
+    bool connectDB();
+    void closeDB();
+    QSqlDatabase objectDb;
 };
 
 #endif // DBDRIVER_H
